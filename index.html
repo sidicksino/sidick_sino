@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+
+    <title>SIDICK ABDOULAYE HISSEIN - CV</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Times New Roman", serif;
+            line-height: 1.6;
+            color: #fff;
+            background: url('Images/S001.png') center/cover no-repeat;
+		}
+
+        div, nav {
+            padding: 2px;
+        }
+
+        header {
+            position: relative;
+            height: 90vh;
+            background: url('Images/SI1.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .A {
+           
+            height: 50vh;
+            background: url('Images/SA3.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+        .A::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+		.A img {
+			margin-right: 40%;
+		}
+
+        header h1 {
+            z-index: 2;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            z-index: 2;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        header a {
+            z-index: 2;
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            color: #000;
+            background-color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 2;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+			font-family: 'Allura', cursive;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: transparent;
+        }
+
+        nav ul li a:hover {
+            color: #00cc99;
+			text-decoration: none;
+        }
+
+        nav ul li:last-child {
+            padding-right: 10px;
+        }
+
+        nav .subscribe {
+            padding: 0.5rem 1rem;
+            color: #fff;
+            background-color: #00cc99;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        nav .subscribe:hover {
+            background-color: #009973;
+			text-decoration: none;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3rem 2rem;
+            border-radius: 6px;
+            margin: 80px auto;
+            max-width: 2000px;
+            color: #fff;
+			background-color: #f0f9ec;
+        }
+
+        section img {
+            max-width: 45%;
+            border-radius: 10px;
+			width: 40%;
+        }
+        section2 img {
+            max-width: 45%;
+            border-radius: 10px;
+			width: 40%;
+        }
+
+        section .content {
+            max-width: 50%;
+        }
+		.P {
+            height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+		}
+		.P img{
+			width: 90vh;;
+			height: 43vh;
+		}
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        section p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+			color: #000;
+        }
+
+        section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        section ul li {
+            margin-bottom: 0.5rem;
+			color: #000;
+        }
+
+        section ul li::before {
+            content: '+';
+            margin-right: 0.5rem;
+            color: #00cc99;
+        }
+
+        h2 {
+            font-family: "Times New Roman", serif;
+            font-size: 50%;
+            color: cornflowerblue;
+        }
+
+        a {
+            color: #00cc99;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+		footer {
+			background-color: #1a2238; /* Dark blue color */
+			color: #fff; /* White text */
+			padding: 2rem 1rem;
+			margin-top: 2rem;
+		}
+		.footer-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+		}
+		.footer-left h3 {
+			font-size: 1.5rem;
+			margin-bottom: 0.5rem;
+		}
+		.footer-left p {
+			font-size: 1rem;
+			margin-bottom: 0.5rem;
+		}
+		.footer-links ul {
+			list-style: none;
+			padding: 0;
+		}
+		.footer-links ul li {
+			margin-bottom: 0.5rem;
+		}
+		.footer-links ul li a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 1rem;
+		}
+		.footer-links ul li a:hover {
+			color: #00cc99; /* Highlight color */
+			text-decoration: underline;
+		}
+		.footer-socials a {
+			margin: 0 0.5rem;
+			text-decoration: none;
+			display: inline-block;
+			transition: transform 0.3s ease;
+		}
+		.footer-socials img {
+			width: 25px;
+			height: 25px;
+		}
+		.footer-socials a:hover {
+			transform: scale(1.1);
+		}
+		.footer-socials img:hover {
+			filter: invert(80%) sepia(40%) saturate(300%) hue-rotate(120deg); /* Green hover effect */
+		}
+		.services {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			padding: 3rem 3rem;
+			background-color: #f0f9ec; /* Light green background */
+		}
+		.service-card {
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			padding: 1rem;
+			text-align: center;
+			flex: 1;
+			max-width: 22%;
+			min-width: 250px; /* Adjust for responsiveness */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.service-card img {
+			width: 200%;
+			border-radius: 10px;
+			margin-bottom: 2rem;
+		}
+		.service-card h3 {
+			font-size: 1.25rem;
+			margin: 0.5rem 0;
+			color: orangered;
+		}
+		.service-card p {
+			font-size: 0.9rem;
+			color: #555;
+			margin-bottom: 1rem;
+			flex-grow: 1;
+		}
+		.service-card button {
+			background-color: orangered;
+			color: #1a2238;
+			padding: 0.5rem 1rem;
+			border: none;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 0.9rem;
+			transition: background-color 0.3s ease;
+		}
+		.service-card button:hover {
+			background-color: #009966;
+		}
+		.service-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+		}
+		.content h1,p{
+			color: #00cc99;
+		}
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+            color: black;
+        }
+
+        .navbar.scrolled {
+            background-color: black;
+            color: white;
+        }
+
+		navbar ul li a.scrolled {
+			color: aqua;
+		}
+		.Q {
+			z-index: 2;
+			display: inline-block;
+			padding: 0.75rem 1.5rem;
+			font-size: 1rem;
+			color: #00cc99; /* White text color */
+			background-color: transparent; /* Transparent background */
+			border: 2px solid #fff; /* White border */
+			border-radius: 25px; /* Rounded corners */
+			text-decoration: none; /* Remove underline */
+			font-weight: bold; /* Bold text */
+			text-align: center;
+			cursor: pointer; /* Show hand cursor */
+			transition: all 0.3s ease; /* Smooth hover effects */
+		}
+		.Q:hover {
+			background-color: #00cc99; /* Change to white on hover */
+			color: #fff; /* Change text to black on hover */
+			transform: scale(1.05); /* Slight zoom effect */
+			box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+			border: 2px solid #009966;
+		}
+		.navbar .logo {
+			font-size: 20px;
+		}
+		.menu {
+			display: flex;
+			list-style: none;
+			gap: 20px;
+		}
+		.menu li {
+			cursor: pointer;
+		}
+		.hamburger {
+			display: none;
+			flex-direction: column;
+			cursor: pointer;
+		}
+		.hamburger span {
+			background: white;
+			height: 3px;
+			width: 25px;
+			margin: 4px 0;
+		}
+		@media screen and (max-width: 768px) {
+			.menu {
+				display: none;
+				flex-direction: column;
+				background-color: black;
+				position: absolute;
+				top: 50px;
+				right: 20px;
+				width: 150px;
+				border-radius: 8px;
+			}
+			.menu li {
+				padding: 10px;
+				text-align: center;
+			}
+			.menu.active {
+				display: flex;
+			}
+			.hamburger {
+				display: flex;
+			}
+		}
+		
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" >SINO BOUR<br>SIDICK ABKOULAYE</div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="register.html" class="subscribe">Subscribe</a></li>
+            </ul>
+			<div class="hamburger" onclick="toggleMenu()">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+        </nav>
+        <div class="content" id="home">
+            <h1>Welcome to My CV</h1>
+            <p>A dedicated computer science data science student with a passion for innovation and excellence.</p>
+        </div>
+		<a href="#about" class="Q">Learn More</a>
+    </header>
+
+    <section id="about">
+        <img src="Images/SA6.jpg" alt="About Me">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>I am SIDICK ABDOULAYE HISSEIN, a Chadian student in Kigali, Rwanda, pursuing a degree in Computer Science Data Science at Université Libre de Kigali (ULK), currently in my second year.</p>
+            <p>I speak French, Arabic, and English. In my free time, I enjoy going out drinking coffee and spending quality time with friends.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <img src="Images/S11.jpg" alt="Education">
+        <div class="content">
+            <h2>Education</h2>
+            <ul>
+                <li>ATTESTATION PROVISOIRE D'ADMISSION AU BEF - BEFA, August 2020, Bokoro (Chad)</li>
+                <li>CERTIFICAT D'ADMISSION BACCALEAUREAT DE L'ENSEIGNEMENT SECONDAIRE GENERAL, July 2023, Abeche (Chad), Mention: Assez-bien</li>
+                <li>English Certificate from WIBENA Center, Kigali, obtained on August 5, 2024</li>
+                <li>Training Certificate: Participated in "Rwanda, a Development Model for a New Departure towards the Emergence of Africa," organized by OPPRC on June 19, 2024</li>
+                <li>Certificate of Participation in PMLTR Event (Best Chadian Winner Prize in Rwanda), organized by OETIIR</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <img src="Images/S12.jpg" alt="Projects">
+        <div class="content">
+            <h2>Projects</h2>
+            <p>As a student, I am continually working on academic projects and exploring real-world applications in data science and computer science. My focus is on enhancing skills through practical experience and teamwork.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <img src="Images/SA4.jpg" alt="Contact">
+		<div class="P">
+			<img src="Images/S109.png" alt="Contact">
+		</div>
+        <div class="content">
+            <h2>Contact Information</h2>
+            <p>Email: sidickabdoulayesino1@gmail.com</p>
+            <p>Phone: +235 65 77 17 16</p>
+            <p>Phone: +250 793 22 58 53</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/example">linkedin.com/in/example</a></p>
+        </div>
+    </section>
+	<section1 class="A">
+		<img src="Images/S108-removebg-preview.png" alt="Dog walking">
+	</section1>
+	
+	<section2 class="services">
+    <div class="service-card">
+        <img src="Images/SA1.jpg" alt="Welfare visits">
+        <h3>HAHIT  AHMAD<br>BRAHIM</h3>
+        <p>Chadian student in Rwanda in computer science data science in second year at Université Libre de Kigali (ULK).</p>
+		<p>Étudiant tchadien au Rwanda en informatique science des données en deuxième année à l'Université Libre de Kigali (ULK).</p>
+        <button>More about HAMIT</button>
+    </div>
+    <div class="service-card">
+        <img src="Images/SS1.jpg" alt="Holiday care">
+        <h3>NARIMAN  OSMAN<br>ROBO</h3>
+        <p>Sudanese student in Rwanda in computer science data science in second year at Université Libre de Kigali (ULK).</p>
+		<p>Étudiant soudanais au Rwanda en informatique science des données en deuxième année à l'Université Libre de Kigali (ULK).</p>
+        <button>More about NARIMAN</button>
+    </div>
+    <div class="service-card">
+        <img src="Images/SS7.jpg" alt="Dog walking" >
+        <h3>SIDICK  ABDOULAYE<br>HISSEIN</h3>
+        <p>Chadian student in Rwanda in computer science data science in second year at Université Libre de Kigali (ULK).</p>
+		<p>Étudiant tchadien au Rwanda en informatique science des données en deuxième année à l'Université Libre de Kigali (ULK).</p>
+        <button>More about SIDICK</button>
+    </div>
+    <div class="service-card">
+        <img src="Images/SS6.jpg" alt="Vet visits">
+        <h3>SALEH  ALI <br> MAHMOUD</h3>
+        <p> Chadian student in Rwanda in social science in second year at Université Libre de Kigali<br> (ULK).</p>
+		<p>Étudiant tchadien au Rwanda en science sociale en deuxième année à l'Université Libre de Kigali (ULK).</p>
+        <button>More about SALEH</button>
+    </div>
+	</section2>
+
+	<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <h3>Enjoy My Portfolio</h3>
+            <p>Craft unique projects and experiences in computer science data science.  
+            I aim to build real-world solutions with innovation and dedication.</p>
+            <p>No coding skills required to understand or explore!</p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <a href="https://twitter.com"><img src="Images/S105.png" alt="Twitter"></a>
+            <a href="https://instagram.com"><img src="Images/S106.png" alt="Instagram"></a>
+            <a href="https://linkedin.com"><img src="Images/S103.png" alt="LinkedIn"></a>
+            <a href="https://facebook.com"><img src="Images/S104.png" alt="Facebook"></a>
+            <a href="https://whatsApp.com"><img src="Images/S107.png" alt="WhatsApp"></a>
+        </div>
+    </div>
+</footer>
+	
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+	<script>
+		function toggleMenu() {
+			const menu = document.querySelector('.menu');
+			menu.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>
