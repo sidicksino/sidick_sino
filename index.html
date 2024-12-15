@@ -100,6 +100,7 @@
             font-size: 1.5rem;
             font-weight: bold;
 			font-family: 'Allura', cursive;
+			color: white;
         }
 
         nav ul {
@@ -333,6 +334,10 @@
 			transform: translateY(-5px);
 			box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 		}
+		.service-card a{
+			text-decoration: none;
+			color: black;
+		}
 		.content h1,p{
 			color: #00cc99;
 		}
@@ -341,23 +346,27 @@
             width: 100%;
             top: 0;
             left: 0;
-            padding: 10px;
+            padding: 2px;
             background-color: transparent;
             transition: background-color 0.3s ease;
             color: black;
         }
 
         .navbar.scrolled {
-            background-color: black;
-            color: white;
+            background-color: #4CAF50;
         }
-
-		navbar ul li a.scrolled {
-			color: aqua;
+		.navbar.scrolled li a{
+			color: cyan;
+		}
+		.navbar.scrolled .logo{
+			color: cyan;
+		}
+		.navbar.scrolled li a:hover{
+			color: orangered;
+			text-decoration: none;
+			transition: .5s;
 		}
 		.Q {
-			z-index: 2;
-			display: inline-block;
 			padding: 0.75rem 1.5rem;
 			font-size: 1rem;
 			color: #00cc99; /* White text color */
@@ -366,7 +375,6 @@
 			border-radius: 25px; /* Rounded corners */
 			text-decoration: none; /* Remove underline */
 			font-weight: bold; /* Bold text */
-			text-align: center;
 			cursor: pointer; /* Show hand cursor */
 			transition: all 0.3s ease; /* Smooth hover effects */
 		}
@@ -376,6 +384,7 @@
 			transform: scale(1.05); /* Slight zoom effect */
 			box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 			border: 2px solid #009966;
+			text-decoration: none;
 		}
 		.navbar .logo {
 			font-size: 20px;
@@ -392,6 +401,7 @@
 			display: none;
 			flex-direction: column;
 			cursor: pointer;
+			margin-right: 20px;
 		}
 		.hamburger span {
 			background: white;
@@ -421,7 +431,23 @@
 				display: flex;
 			}
 		}
-		
+        }
+
+        /* Optional styles for the menu */
+        .menu.active {
+            display: block;
+        }
+
+        /* Add styles for Back-to-Top button */
+        #backToTop {
+            padding: 10px;
+            font-size: 14px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -446,20 +472,20 @@
             <h1>Welcome to My CV</h1>
             <p>A dedicated computer science data science student with a passion for innovation and excellence.</p>
         </div>
-		<a href="#about" class="Q">Learn More</a>
+		<a href="education.html" class="Q">Learn More</a>
     </header>
 
     <section id="about">
-        <img src="Images/SA6.jpg" alt="About Me" loading="lazy">
+        <img src="Images/SA6.jpg" alt="About Me">
         <div class="content">
             <h2>About Me</h2>
-            <p>I am SIDICK ABDOULAYE HISSEIN, a Chadian student in Kigali, Rwanda, pursuing a degree in Computer Science Data Science at Université Libre de Kigali (ULK), currently in my second year.</p>
+            <p>I am SIDICK ABDOULAYE HISSEIN, a Chadian student in Kigali, Rwanda, pursuing a degree in Computer Science Data Science at kigali Independent University (ULK), currently in my second year.</p>
             <p>I speak French, Arabic, and English. In my free time, I enjoy going out drinking coffee and spending quality time with friends.</p>
         </div>
     </section>
 
     <section id="education">
-        <img src="Images/S11.jpg" alt="Education" loading="lazy">
+        <img src="Images/S11.jpg" alt="Education">
         <div class="content">
             <h2>Education</h2>
             <ul>
@@ -473,17 +499,17 @@
     </section>
 
     <section id="projects">
-        <img src="Images/S12.jpg" alt="Projects" loading="lazy">
+        <img src="Images/S12.jpg" alt="Projects">
         <div class="content">
             <h2>Projects</h2>
-            <p>As a student, I am continually working on academic projects and exploring real-world applications in data science and computer science. My focus is on enhancing skills through practical experience and teamwork.</p>
+            <p>As a student, I am continually working on academic projects and exploring real-world applications in Computer Science Data Science. My focus is on enhancing skills through practical experience and teamwork.</p>
         </div>
     </section>
 
     <section id="contact">
-        <img src="Images/SA4.jpg" alt="Contact" loading="lazy">
+        <img src="Images/SA4.jpg" alt="Contact">
 		<div class="P">
-			<img src="Images/S109.png" alt="Contact" loading="lazy">
+			<img src="Images/S109.png" alt="Contact">
 		</div>
         <div class="content">
             <h2>Contact Information</h2>
@@ -494,37 +520,37 @@
         </div>
     </section>
 	<section1 class="A">
-		<img src="Images/S108-removebg-preview.png" alt="Dog walking" loading="lazy">
+		<img src="Images/S108-removebg-preview.png" alt="Dog walking">
 	</section1>
 	
 	<section2 class="services">
     <div class="service-card">
-        <img src="Images/SA1.jpg" alt="Welfare visits" loading="lazy">
+        <img src="Images/SA1.jpg" alt="Welfare visits">
         <h3>HAHIT  AHMAD<br>BRAHIM</h3>
-        <p>Chadian student in Rwanda in computer science data science in second year at Université Libre de Kigali (ULK).</p>
+        <p>Chadian student in Rwanda in computer science data science in second year at kigali Independent University (ULK).</p>
 		<p>Étudiant tchadien au Rwanda en informatique science des données en deuxième année à l'Université Libre de Kigali (ULK).</p>
-        <button>More about HAMIT</button>
+        <button><a href="#home">More about HAMIT</a></button>
     </div>
     <div class="service-card">
-        <img src="Images/SS1.jpg" alt="Holiday care" loading="lazy">
+        <img src="Images/SS1.jpg" alt="Holiday care">
         <h3>NARIMAN  OSMAN<br>ROBO</h3>
-        <p>Sudanese student in Rwanda in computer science data science in second year at Université Libre de Kigali (ULK).</p>
+        <p>Sudanese student in Rwanda in computer science data science in second year at kigali Independent University (ULK).</p>
 		<p>Étudiant soudanais au Rwanda en informatique science des données en deuxième année à l'Université Libre de Kigali (ULK).</p>
-        <button>More about NARIMAN</button>
+        <button><a href="#home">More about NARIMAN</a></button>
     </div>
     <div class="service-card">
-        <img src="Images/SS7.jpg" alt="Dog walking" loading="lazy">
+        <img src="Images/SS7.jpg" alt="Dog walking" >
         <h3>SIDICK  ABDOULAYE<br>HISSEIN</h3>
-        <p>Chadian student in Rwanda in computer science data science in second year at Université Libre de Kigali (ULK).</p>
+        <p>Chadian student in Rwanda in computer science data science in second year at kigali Independent University (ULK).</p>
 		<p>Étudiant tchadien au Rwanda en informatique science des données en deuxième année à l'Université Libre de Kigali (ULK).</p>
-        <button>More about SIDICK</button>
+        <button><a href="education.html">More about SIDICK</a></button>
     </div>
     <div class="service-card">
-        <img src="Images/SS6.jpg" alt="Vet visits" loading="lazy">
+        <img src="Images/SS6.jpg" alt="Vet visits">
         <h3>SALEH  ALI <br> MAHMOUD</h3>
-        <p> Chadian student in Rwanda in social science in second year at Université Libre de Kigali<br> (ULK).</p>
+        <p> Chadian student in Rwanda in social science in second year at kigali Independent University<br> (ULK).</p>
 		<p>Étudiant tchadien au Rwanda en science sociale en deuxième année à l'Université Libre de Kigali (ULK).</p>
-        <button>More about SALEH</button>
+        <button><a href="#home">More about SALEH</a></button>
     </div>
 	</section2>
 
@@ -545,16 +571,15 @@
             </ul>
         </div>
         <div class="footer-socials">
-            <a href="https://twitter.com"><img src="Images/S105.png" alt="Twitter" loading="lazy"></a>
-            <a href="https://instagram.com"><img src="Images/S106.png" alt="Instagram" loading="lazy"></a>
-            <a href="https://linkedin.com"><img src="Images/S103.png" alt="LinkedIn" loading="lazy"></a>
-            <a href="https://facebook.com"><img src="Images/S104.png" alt="Facebook" loading="lazy"></a>
-            <a href="https://whatsApp.com"><img src="Images/S107.png" alt="WhatsApp" loading="lazy"></a>
+            <a href="https://twitter.com"><img src="Images/S105.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/sidick_abdoulaye_sino"><img src="Images/S106.png" alt="Instagram"></a>
+            <a href="https://linkedin.com"><img src="Images/S103.png" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/sidickabdoulaye.sino?mibextid=ZbWKwL"><img src="Images/S104.png" alt="Facebook"></a>
+            <a href="https://whatsApp.com"><img src="Images/S107.png" alt="WhatsApp"></a>
         </div>
     </div>
-</footer>
-	
-    <script>
+	</footer>
+	<script>
         document.addEventListener('DOMContentLoaded', () => {
             const navbar = document.querySelector('.navbar');
 
@@ -567,11 +592,39 @@
             });
         });
     </script>
-	<script>
-		function toggleMenu() {
-			const menu = document.querySelector('.menu');
-			menu.classList.toggle('active');
-		}
-	</script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+    <script>
+        // Back-to-Top Button Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopButton = document.createElement('button');
+            backToTopButton.id = 'backToTop';
+            backToTopButton.textContent = '↑ Top';
+            backToTopButton.style.display = 'none';
+            backToTopButton.style.position = 'fixed';
+            backToTopButton.style.bottom = '20px';
+            backToTopButton.style.right = '20px';
+            backToTopButton.style.zIndex = '1000';
+            document.body.appendChild(backToTopButton);
+
+            // Show the button when scrolling down
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+
+            // Scroll to top when the button is clicked
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
