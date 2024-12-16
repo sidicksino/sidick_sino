@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/png" href="Images/S108.png" sizes="16x16">
+	<link rel="apple-touch-icon" href="Images/S108.png">
     <title>SIDICK ABDOULAYE HISSEIN - CV</title>
     <style>
         body {
@@ -33,7 +34,7 @@
 
         .A {
            
-            height: 50vh;
+            height: 60vh;
             background: url('Images/SA3.jpg') center/cover no-repeat;
             display: flex;
             justify-content: center;
@@ -56,10 +57,14 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 90%;
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
         }
+		.A:hover{
+			background: url('Images/SA2.jpg') center/cover no-repeat;
+			transition: .7s;
+		}
 		.A img {
 			margin-right: 40%;
 		}
@@ -139,6 +144,7 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: bold;
+			margin-top: 10px;
         }
 
         nav .subscribe:hover {
@@ -152,14 +158,27 @@
             justify-content: space-between;
             padding: 3rem 2rem;
             border-radius: 6px;
-            margin: 80px auto;
+            margin: 80px 0;
             max-width: 2000px;
             color: #fff;
 			background-color: #f0f9ec;
         }
-
+		
+		@media (max-width: 768px) {
+    section {
+        flex-direction:column; /* Stack the content vertically */
+        text-align:justify-all; /* Optional: Center the text */
+		margin: 10px 0;
+		padding: 5px;
+    }
+    sectiont .content{
+        width: 200%; /* Full width for the text */
+		height: auto;
+		margin: 0;
+    }
+}
         section img {
-            max-width: 45%;
+            margin-right: 20px;
             border-radius: 10px;
 			width: 40%;
         }
@@ -172,17 +191,6 @@
         section .content {
             max-width: 50%;
         }
-		.P {
-            height: 40vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-		}
-		.P img{
-			width: 90vh;;
-			height: 43vh;
-		}
-
         section h2 {
             font-size: 2rem;
             margin-bottom: 1rem;
@@ -302,6 +310,10 @@
 			align-items: center;
 			transition: transform 0.3s ease, box-shadow 0.3s ease;
 		}
+		.service-card:hover{
+			background-color: aqua;
+			transition: .7s;
+		}
 		.service-card img {
 			width: 200%;
 			border-radius: 10px;
@@ -339,8 +351,93 @@
 			text-decoration: none;
 			color: black;
 		}
+		.services1 {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 1.5rem;
+			padding: 9rem 9rem;
+			background-color: #f0f9ec; /* Light green background */
+		}
+		.service-card1 {
+			background: transparent;
+			border-radius: 10px;
+			padding: 1rem;
+			text-align: center;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			height: 30%;
+			width: 20%;
+		}
+		.service-card1 img {
+			width: 50%;
+			border-radius: 10px;
+		}
+		.service-card1:hover{
+			background-color: #fff;
+			transition: .4s;
+			transform: translateY(-5px);
+			box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+		}
+		.service-card1 p{
+			font-size: 0.9rem;
+			color: black;
+			margin-bottom: 1rem;
+			flex-grow: 1;
+		}
+		.service-card1 span{
+			color: red;
+		}
+		@media (min-width: 1024px) and (max-width: 1366px) {
+			.services1 {
+				padding: 1.5rem; /* Reduce padding for smaller laptops */
+				gap: 0.75rem; /* Reduce spacing */
+			}
+			.service-card1 {
+				flex: 1 1 calc(30% - 0.75rem); /* Slightly larger cards (3 per row) */
+			}
+		}
+
+/* Media Queries for Tablets and Small Laptops */
+		@media (max-width: 1024px) {
+			.services1 {
+				flex-direction: row;
+				padding: 1rem; /* Minimal padding for smaller devices */
+			}
+			.service-card1 {
+				flex: 1 1 calc(45% - 1rem); /* Two cards per row */
+				margin-bottom: 1rem; /* Add spacing at the bottom of each card */
+			}
+		}
+
+/* Mobile Screens */
+		@media (max-width: 768px) {
+			.service-card1 {
+				flex: 1 1 50%; /* Full width for mobile */
+			}
+		}
 		.content h1,p{
 			color: #00cc99;
+			position: relative;
+		}
+		.content1 h1,p{
+			color: #00cc99;
+			position: relative;
+		}
+		.content1 h1:after{
+			content: "";
+			background: linear-gradient(to right, red, blue);
+			width: 50%;
+			height: 5%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			margin-left: 25%;
+			margin-bottom: 1%;
 		}
         .navbar {
             position: fixed;
@@ -448,6 +545,9 @@
             border-radius: 5px;
             cursor: pointer;
         }
+		#backToTop:hover{
+			background-color: orangered;
+		}
 		*, *::before, *::after {
 			box-sizing: border-box;
 			margin: 0;
@@ -477,7 +577,7 @@
 				<span></span>
 			</div>
         </nav>
-        <div class="content" id="home">
+        <div class="content1" id="home">
             <h1>Welcome to My CV</h1>
             <p>A dedicated computer science data science student with a passion for innovation and excellence.</p>
         </div>
@@ -498,11 +598,11 @@
         <div class="content">
             <h2>Education</h2>
             <ul>
-                <li><strong>ATTESTATION PROVISOIRE D'ADMISSION AU BEF - BEFA, August 2020, Bokoro (Chad)</strong></li>
-                <li><strong>CERTIFICAT D'ADMISSION BACCALEAUREAT DE L'ENSEIGNEMENT SECONDAIRE GENERAL, July 2023, Abeche (Chad), Mention: Assez-bien</strong></li>
-                <li><strong>English Certificate from WIBENA Center, Kigali, obtained on August 5, 2024</strong></li>
-                <li><strong>Training Certificate: Participated in "Rwanda, a Development Model for a New Departure towards the Emergence of Africa," organized by OPPRC on June 19, 2024</strong></li>
-                <li><strong>Certificate of Participation in PMLTR Event (Best Chadian Winner Prize in Rwanda), organized by OETIIR</strong></li>
+                <li>ATTESTATION PROVISOIRE D'ADMISSION AU BEF - BEFA, August 2020, Bokoro (Chad)</li>
+                <li>CERTIFICAT D'ADMISSION BACCALEAUREAT DE L'ENSEIGNEMENT SECONDAIRE GENERAL, July 2023, Abeche (Chad), Mention: Assez-bien</li>
+                <li>English Certificate from WIBENA Center, Kigali, obtained on August 5, 2024</li>
+                <li>Training Certificate: Participated in "Rwanda, a Development Model for a New Departure towards the Emergence of Africa," organized by OPPRC on June 19, 2024</li>
+                <li>Certificate of Participation in PMLTR Event (Best Chadian Winner Prize in Rwanda), organized by OETIIR</li>
             </ul>
         </div>
     </section>
@@ -517,9 +617,6 @@
 
     <section id="contact">
         <img src="Images/SA4.jpg" alt="Contact" loading="lazy">
-		<div class="P">
-			<img src="Images/S109.png" alt="Contact" loading="lazy">
-		</div>
         <div class="content">
             <h2>Contact Information</h2>
             <p>Email: sidickabdoulayesino1@gmail.com</p>
@@ -528,8 +625,28 @@
             <p>LinkedIn: <a href="https://www.linkedin.com/in/example">LinkedIn Profile</a></p>
         </div>
     </section>
-	<div class="A">
-		<img src="Images/S108-removebg-preview.png" alt="Dog walking" loading="lazy">
+
+	<div class="services1">
+    <div class="service-card1">
+        <img src="Images/H4.png" alt="Hamit Ahmad's photo1" loading="lazy">
+        <p><span>“</span>N'essayez pas de devenir un homme qui a du succès.Essayez de devenir un homme qui a de la valeur.<span>”</span></p><br>
+		<p><span>“</span>Don't try to become a successful man. Try to become a man of value.<span>”</span></p>
+    </div>
+    <div class="service-card1">
+        <img src="Images/H3.png" alt="Nariman Osman's photo1" loading="lazy">
+        <p><span>“</span> The goal of Education is the advancement of knowledge and the dissemination of truth.<span>”</span></p><br>
+		<p><span>“</span> Le but de l'éducation est l'avancement des connaissances et la diffusion de la vérité.<span>”</span></p>
+    </div>
+    <div class="service-card1">
+        <img src="Images/H2.png" alt="Sidick Abdoulaye's photo1" loading="lazy">
+        <p><span>“</span> A scientific mistake can kill people, but a cultural mistake can kill generations!<span>”</span></p><br>
+		<p><span>“</span> Une erreur scientifique peut tuer des personnes, mais une erreur culturelle peut tuer des générations!<span>”</span></p>
+    </div>
+    <div class="service-card1">
+        <img src="Images/H1.png" alt="Saleh Ali's photo1" loading="lazy">
+        <p><span>“</span> Logic will take you from point A to B, Imagination and Audacity will take you wherever you want to go.<span>”</span></p><br>
+		<p><span>“</span>La logique vous conduira d'un point A à pont B, l'Imagination et l'Audace vous conduiront où vous le désirez.<span>”</span></p>
+    </div>
 	</div>
 	
 	<div class="services">
@@ -538,7 +655,7 @@
         <h3>HAHIT  AHMAD<br>BRAHIM</h3>
         <p>Chadian student in Rwanda in computer science data science in second year at kigali Independent University (ULK).</p>
 		<p>Étudiant tchadien au Rwanda en informatique science des données en deuxième année à l'Université Libre de Kigali (ULK).</p>
-        <button><a href="#home">More about HAMIT</a></button>
+        <button><a href="index1.html">More about HAMIT</a></button>
     </div>
     <div class="service-card">
         <img src="Images/SS1.jpg" alt="Nariman Osman's photo" loading="lazy">
@@ -561,6 +678,9 @@
 		<p>Étudiant tchadien au Rwanda en science sociale en deuxième année à l'Université Libre de Kigali (ULK).</p>
         <button><a href="#home">More about SALEH</a></button>
     </div>
+	</div>
+	<div class="A">
+		<img src="Images/S108-removebg-preview.png" alt="Dog walking" loading="lazy">
 	</div>
 
 	<footer>
